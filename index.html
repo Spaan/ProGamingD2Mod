@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mod Installation Guide</title>
+  <style>
+    /* Dark theme similar to ChatGPT */
+    :root {
+      --bg: #0a0b0d;
+      --fg: #d1d5db;
+      --accent: #10a37f;
+      --code-bg: #1f2023;
+      --code-fg: #f5f5f5;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 2rem;
+      color: var(--accent);
+    }
+    ol {
+      counter-reset: step;
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    ol li {
+      position: relative;
+      padding: 1rem 1rem 1rem 4rem;
+      margin-bottom: 1rem;
+      background: #15161a;
+      border-radius: 0.5rem;
+    }
+    ol li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--accent);
+      color: var(--bg);
+      width: 2rem;
+      height: 2rem;
+      line-height: 2rem;
+      border-radius: 50%;
+      font-weight: bold;
+      text-align: center;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    pre, code {
+      font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+    }
+    pre {
+      background: var(--code-bg);
+      color: var(--code-fg);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mod Installation Guide</h1>
+    <p>Follow these steps to install the UI Mod used by ProGaming046_pbp for Diablo 2 Resurrected.</p>
+  </header>
+
+  <main>
+    <ol>
+      <li>
+        <strong>Download the Mod Files.</strong>
+        <p>Go to the <a href="#">release page</a> and download the latest ZIP archive.</p>
+      </li>
+      <li>
+        <strong>Extract the ZIP.</strong>
+        <p>Unzip the contents into a folder of your choice.</p>
+      </li>
+      <li>
+        <strong>Locate Your Game Directory.</strong>
+        <p>Find where Diablo 2 Resurrected is installed on your system.</p>
+      </li>
+      <li>
+        <strong>Copy Mod Files.</strong>
+        <p>Drag and drop all files from the extracted folder into your game directory.</p>
+      </li>
+      <li>
+        <strong>Launch the Game.</strong>
+        <p>Start Diablo 2 Resurrected as usual. The mod should load automatically.</p>
+        <pre><code>// Example launch command on Windows
+"C:\Program Files\Diablo II Resurrected\D2R.exe" --txt
+</code></pre>
+      </li>
+      <!-- Add more <li> steps here -->
+    </ol>
+  </main>
+
+  <footer>
+    &copy; 2025 spaAn_ • Hosted on GitHub Pages
+  </footer>
+</body>
+</html>
