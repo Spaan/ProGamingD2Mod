@@ -23,15 +23,52 @@
       color: var(--fg);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       line-height: 1.6;
-      padding: 2rem;
+      padding: 0; /* remove default padding since we now have a top bar */
     }
+
+    /* SCROLLING DISCLAIMER BAR */
+    .disclaimer-container {
+      width: 100%;
+      background: #15161a;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      padding: 0.5rem 0; 
+      border-bottom: 1px solid #2a2b30;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .disclaimer-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-text 24s linear infinite;
+      font-size: 0.875rem;
+      color: #f3f4f6;
+    }
+    @keyframes scroll-text {
+      from { transform: translateX(0%); }
+      to   { transform: translateX(-100%); }
+    }
+
     header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin: 2rem auto 3rem;
+      max-width: 800px;
+      padding: 0 1rem;
     }
     header h1 {
       font-size: 2rem;
       color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      color: var(--fg);
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem;
     }
     ol {
       counter-reset: step;
@@ -43,7 +80,7 @@
       position: relative;
       padding: 1rem 1rem 1rem 4rem;
       margin-bottom: 1rem;
-      background: #15161a;
+      background: #1f2023;
       border-radius: 0.5rem;
     }
     ol li::before {
@@ -82,13 +119,20 @@
     }
     footer {
       text-align: center;
-      margin-top: 3rem;
+      margin: 3rem 0;
       font-size: 0.9rem;
       color: #6b7280;
     }
   </style>
 </head>
 <body>
+  <!-- Scrolling Disclaimer -->
+  <div class="disclaimer-container">
+    <div class="disclaimer-text">
+      Use this mod at your own risk! ProGaming046_pbp and some others have been using this for some time now without issue but keep in mind that anything can happen and nobody takes any responsibility if your account is banned for the use of this mod! Please make peace with this fact before continuing.
+    </div>
+  </div>
+
   <header>
     <h1>ProGaming046_pbp UI Mod Installation Guide</h1>
     <p>Follow these steps to install the UI Mod used by ProGaming046_pbp for Diablo 2 Resurrected.</p>
@@ -98,7 +142,7 @@
     <ol>
       <li>
         <strong>Download the Mod Files.</strong>
-        <p>Get the mod files <a href="https://drive.google.com/file/d/1jbUOz9xJ7WqLoeJ9Tb6UmMSPK2Wn2jNp/view">here</a> save them to your PC.</p>
+        <p>Get the mod files <a href="https://drive.google.com/file/d/1jbUOz9xJ7WqLoeJ9Tb6UmMSPK2Wn2jNp/view">here</a> and save them to your PC.</p>
       </li>
       <li>
         <strong>Extract the RAR.</strong>
@@ -109,24 +153,23 @@
         <p>Find where Diablo 2 Resurrected is installed on your system.</p>
       </li>
       <li>
-      <li>
-        <strong>Create the Mods Folder</strong>
-        <p>This step is only required if the folder doesn't already exist from a previous mod installation. The folder must be called "mods" and not "Mods" and should be in the game's root directory alongside the game's executables.</p>
+        <strong>Create the Mods Folder.</strong>
+        <p>This step is only required if the folder doesn't already exist. Name it <code>mods</code> (all lowercase) and place it in the game's root directory alongside the executables.</p>
       </li>
       <li>
         <strong>Move Mod Files.</strong>
-        <p>Drag and drop the danimal folder into the mods folder.</p>
+        <p>Drag and drop the <code>danimal</code> folder into the <code>mods</code> folder.</p>
       </li>
       <li>
-        <strong>Set Up the Launch Parameters Inside the Battle.net Launcher.</strong>
-        <p>Go to Diablo II Resurrected and click the gear next to play. Click Game Settings and toggle on "Additional command line arguments" and paste the following in the box below it. </p>
+        <strong>Set Up Launch Parameters.</strong>
+        <p>In the Battle.net Launcher, click the gear on Diablo II Resurrected, open Game Settings, enable “Additional command line arguments,” and paste:</p>
         <pre><code>-mod danimal -txt
 </code></pre>
       </li>
       <li>
         <strong>You're Done!</strong>
-        <p>The mod should now be installed and configured correctly. Start your game as you normally would and enjoy!</p>
-      </li>>
+        <p>The mod should now load automatically whenever you start the game.</p>
+      </li>
     </ol>
   </main>
 
